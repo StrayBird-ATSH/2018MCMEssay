@@ -1,0 +1,401 @@
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = false,
+        tcn = 78431, problem = B,
+        sheet = true, titleinsheet = true, keywordsinsheet = true,
+        titlepage = false, abstract = true}
+\usepackage{palatino}
+\usepackage{lipsum}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\title{The blueprint of our future world's languages - \newline A language population dynamics model  }
+\author{AUTHOR}
+\date{\today}
+\begin{document}
+\begin{abstract}
+We propose a language population dynamics model to investigate the trends of world's language.
+We work out a primary language population dynamics model first and then use comprehensive evaluation to make amendments to this model.
+
+
+First, we reasonably put emphasis on the main influences of language population caused by the fertility, mortality and migration conditions. Then, we work out the primary language population dynamics model.
+
+
+Next, we add other factors as modulation terms to the primary model. We use method for comprehensive evaluation to achieve this goal, TOPSIS specifically. We transform this valuation of language's else factors into the increase in population. Then, we work out the revised language population dynamics model as our final model.
+
+
+Afterwards, we draw out the world's map in the unit of language.
+Finally, we pin the suitable international offices on this world's map of language. We continue to use TOPSIS and add more business qualified factors like English popularity and economic conditions to the model.
+
+
+Given the result of our model, we are presented with the question of where suitable international offices should be located such that our international offices have optimal quality of employees.
+We present the curve of 12 main languages' population over time both in narrow sense and in generalized sense. We also present the language value world map. We advised to set our offices in New Delhi,India;Ciudad de Méxicowe,Mexico; Dhaka,Bangladesh; Jakarta, Indonesia; Cairo, Egypt; Rio de Janeiro,Brazil.
+
+\begin{keywords}
+
+Leslie matrix; population prediction; TOPSIS
+
+
+\end{keywords}
+\end{abstract}
+\maketitle
+\tableofcontents
+\newpage
+\section{Introduction}
+\subsection{Background}
+
+Of the some 6900 languages in the world, the native tongue of most of world's population concentrate in only a few, making speakers of those languages populous. With globalization in process, chances are that more people will speak one or more additional languages. Population speaking a language may fluctuate due to a variety of factors. The natural population change of the native speakers of a language, migration and government policies are some of the main factors while other small factors play a non-negligible role.
+
+\subsection{Restatement of the Problem}
+
+We chose the problem of investigating trends of global languages and location of new international office.
+
+We are offered with \emph{List of languages by total number of speakers} \footnote{\textbf{Retrieved from} \url{https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers} \textbf{on January 17, 2018.}}.  In the list, we get the population of L2 speakers.
+
+However, there are two notions of second language (or L2) that either
+
+\begin{itemize}
+
+  \item A language that is not the native language of the speaker, but that is used in the locale of that person. In contrast, a foreign language is a language that is learned in an area where that language is not generally spoken by the community as a whole.
+
+  \item Any language learned in addition to one's native language, especially in the context of second-language acquisition.
+
+\end{itemize}
+
+
+We focus exclusively on the first definition. This definition agrees with accessible data more closely because the formal data bank of the United Nations defines second language as the first definition. For example, English is regarded as second language in Hong Kong, China, while a considerable share of the population of English speakers in China mainland is not counted.
+
+\subsection{Our approach}
+
+We are aimed at modeling the population mobility of the language speakers.
+
+First, we reasonably put emphasis on the main influences of language population caused by the fertility, mortality and migration conditions. Then, we work out the primary language population dynamics model.
+
+Next, we add other factors as modulation terms to the primary model. For example, culture factors like booming tourism and culture influence of a language, the linguistic factor like language family, etc. We use method for comprehensive evaluation to achieve this goal, TOPSIS specifically. Then, we work out the revised language population dynamics model as our final model.
+
+Finally, we can pin the suitable international offices. We continue to use method for comprehensive evaluation to achieve this goal. The determinant includes the English popularity and economic conditions besides the final language population dynamics model, for the aim of locating the appropriate offices with easier recruitment of multi-lingual employees and higher business value.
+
+\includegraphics[scale=0.7]{1.png}
+
+\section{Assumptions and Justifications}
+
+\begin{enumerate}
+  \item \textbf{Age-specific death rate remains constant over time.}
+  \item \textbf{Age-specific fertility rate of female remains constant over time.}
+  \item \textbf{The sex ratio from the age of 15 to the age of 50 remains constant.}  This age range is regarded as the child-bearing period of female and we use the existed data to work out our model.
+  \item \textbf{Only natural change of population be considered.}  The change of fertility, mortality and migration rate of the population because of local wars, natural disasters or any other special reasons should not be taken into consideration.
+  \item \textbf{Language policy change little.}  The transform in the language policy of a country and the language(s) used in schools.
+  \item \textbf{The descendants of immigrants can speak the language(s) of their adopted countries.} We consider the descendants have assimilated.
+  \item \textbf{The age structure of immigrants remains constant.}
+  \item \textbf{The growth rate of the major language(s) in a country approximately equals that of country's population.}  We suppose the living conditions of different regions in one same country are similar. The overall growth rate can represent the individual overall growth.
+  \item \textbf{The ratio of the representative country(s)' population which speak a certain language to its total population of speakers in all related countries remains constant.}  The major language(s) in the country has(have) a considerable population of speakers. The reason of this assumption is similar to the prior assumption. The indicators of main countries' population can represent that of all related countries.
+
+      \begin{equation}\label{the first equation}
+        \frac{N_1}{N_2}   \equiv C
+      \end{equation}
+
+      In this equation, $N_1$ is the number of a language's speakers in representative countries and $N_2$ is the total number of a language's speakers in all related countries
+
+\end{enumerate}
+
+\section{Notation}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Symbol} & \textbf{Definition} \\
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $\Psi(t)$ &   Number of newborn in a period of time from $t$ to $t+1$  \\
+  \hline
+  $\beta(t)$ &   Total fertility rate   \\
+  \hline
+  $x_i(t)$  & Number of people at the age of $i$ and $i+1$ in a period of time from $t$ to $t+1$\\
+  \hline
+  $\mu_{00}$ & Infant mortality rate \\
+  \hline
+  $\mu_i(t) $ & Age-specific death rate \\ \hline
+  $ g_i(t)$ & Number of net migration people at the age of $i$ and $i+1$ in a period of time \\ & from $t$ to $t+1$  \\ \hline
+\end{tabular}
+\section{Primary model for language population dynamics}
+
+\subsection{Model Overview}
+
+We generally study the population change in units of country. Therefore, we should first refine our modelling work to a country scope. To simplify the modelling works, we select the suitable countries as studying objects according to the lists of top ten languages given. We choose about 20 appropriate countries.
+
+This primary language population dynamics model is influenced by the fertility, mortality and migration conditions of these selected countries. Therefore, we design our working process as follow:
+
+\begin{enumerate}[Step 1:]
+  \item Work out the natural population dynamics model and population migration model of a \emph{country}.
+  \item Involve the studying objects of \emph{language} with the help of data concerning the distribution and speaking rate of some main \emph{languages} in a certain \emph{country}.
+  \item Change the studying object from \emph{country} to \emph{language} for the ultimate purpose of investigating the trend of global languages. Then we form the language population dynamics model.
+\end{enumerate}
+
+\subsection{Concrete Model}
+\subsubsection{Choosing suitable representative countries}
+Above all, the usage of major languages is greatly influenced by the countries with large population and our selection put more weight on the population of the countries speaking a certain language. The list of the countries with the greatest population are listed in the table and the major languages spoken in these countries are specified. From the table, we can predict that as the population of the countries go down, the influence of the country towards the languages will become weaker and weaker. As a result, the countries with the twenty largest population are selected.
+
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Rank & Country Name & Population & Percentage of & Accumulated\\  &  &  (2016  &  world  &  percentage \\  &  &statistics) & population &  \\ \hline
+  1 & China & 1378665000 & 18.5\% & 18.5\% \\ \hline
+ 2 & India & 1324171354 & 17.7\% & 36.2\% \\  \hline
+ 3 & United States & 323127513 & 4.3\% & 40.5\% \\  \hline
+  4 & Indonesia & 261115456 & 3.5\% & 44.0\%   \\  \hline
+  5 & Brazil & 207652865 & 2.8\% & 46.8\% \\  \hline
+  6 & Pakistan & 193203476 & 2.6\% & 49.4\% \\  \hline
+  7 & Bangladesh & 162951560 & 2.2\% & 51.6\% \\  \hline
+  8 & Russian Federation & 144342396 & 1.9\% &  53.5\%\\ \hline
+  9 & Mexico & 127540423 & 1.7\% & 55.2\% \\ \hline
+  10 & Japan & 126994511 & 1.7\% & 56.9\% \\ \hline
+  11 & Egypt, Arab Rep. & 95688681 & 1.3\% & 58.2\% \\ \hline
+  12 & Congo, Dem. Rep.  & 78736153 & 1.1\% & 59.3\% \\ \hline
+  13 & France & 66896109 & 0.9\% & 60.1\% \\ \hline
+  14 & United Kingdom & 65637239 & 0.9\% & 61.0\% \\ \hline
+  15 & Spain & 46443959 & 0.6\% & 61.6\% \\ \hline
+  16 & Canada & 36286425 & 0.5\% & 62.1\% \\ \hline
+  17 & Morocco & 35276786 & 0.5\% & 62.6\% \\ \hline
+  18 & Saudi Arabia & 32275687 & 0.4\% & 63.0\% \\ \hline
+  19 & Malaysia & 31187265 & 0.4\% & 63.5\% \\ \hline
+  20 & Portugal & 10324611 & 0.1\% & 63.6\% \\  \hline
+\end{tabular}
+
+More specifically, we can see that the 20th country count for only 0.1\% of the world population, indicating that the countries below it have even smaller population proportions, making its influence on the world language change even weaker. From another perspective, the top twenty countries account for 63.6\% of the world population. Therefore, they can well represent the trend of the main population change in the world.
+
+\includegraphics[scale=0.25]{final1.jpg}
+
+We get this data through the statistics of representative speaking countries of a ceatain language.
+
+According to Leslie model, we can conclude the following equations:
+\begin{equation}
+  \Psi(x) = \beta(t) k \sum_{15}^{50} x_i(t)
+\end{equation}
+\begin{equation}
+  x_0(t)= (1-\mu_{00})\Psi(t)+g_0(t)
+\end{equation}
+\begin{equation}
+  x_1(t+1)=(1-\mu_0(t))x_0(t)+g_1(t)
+\end{equation}
+\begin{equation}\
+  x_m(t+1)=(1-\mu_m-1(t))x_m-1(t)+g_m(t)
+\end{equation}
+\begin{equation}
+  N(t)=\sum_{0}^{m} x_i(t)
+\end{equation}
+\subsubsection{Forming the model for population dynamics}
+According to the third assumption in the second section, $k$, $u_i(t)$, $x_i(2010)$ and  $g_i(t)$ are accessible form the database of the United Nations. We can calculate $N(t)$ from the statistics above.
+
+
+
+\includegraphics[scale=0.6]{table3.jpg}
+
+Besides, given the assumptions 8 and 9, the predictions of the country can be converted to the predictions of the languages.
+
+
+\includegraphics[scale=0.64]{table11.png}
+
+
+
+\includegraphics[scale=0.64]{figure1.png}
+%appendix
+
+
+
+\section{Model for evaluation of other language factors as amendment}
+
+\subsection{Model Overview}
+
+
+
+Except for the main factors studied above, we should also take other factors into consideration. Here, we list four factors:
+
+\begin{itemize}
+  \item \textbf{Economic condition.} Economic condition tells the activeness of a country's international business. The better the economic condition, the more attractive the foreign investments.
+  \item \textbf{Potential second language speakers.} According to the definition of L2 mentioned in the restatement, the property of the language may change over time. For example, English is regarded as foreign language at present in Shanghai, China. However, according to the EF EPI \footnote{The English proficiency index research studied by the EF company \url{https://liuxue.ef.com.cn/epi/regions/asia/china/} } , the English proficiency index of Shanghai is 56.76 while that of Hong Kong is 55.81. At present, English has become the second language of Hong Kong according to the Ethnologue  \footnote{Retrieved from \url{https://www.ethnologue.com/}.}.  We can reasonably assume that in the near future, English will be the second language of people in Shanghai. These citizen of Shanghai is regarded as the potential second language speakers.
+  \item \textbf{Cultural factors including global tourism and culture influence.} Global tourism promotes the language learning. What's more, American TV dramas, British TV dramas and Japanese animation are just some representative of the cultural influence nowadays. These cultural factors are non-negligible.
+  \item \textbf{Linguistic factor of language family.} Some language families may have priorities in terms of difficulty of acquisition due to the history of language development. For example, Indo-European languages are the most widely distributed language in contemporary world. Today, about 46\% of the human population speaks an Indo-European language as a first language, by far the highest of any language family. This promise Indo-European language to have priority over other language family.
+\end{itemize}
+
+\subsection{Concrete model}
+
+We use TOPSIS (\textbf{Technique for Order Preference by Similarity to an Ideal Solution}) \footnote{ \url{https://en.wikipedia.org/wiki/TOPSIS}}  to evaluate these four factors.
+
+
+\includegraphics[scale=0.2]{table4.jpg}
+
+\includegraphics{table2.jpg}
+
+\begin{tabular}{|l|l|l|}\hline
+   country   & value &  Rank\\ \hline
+  Chinese & 0.750&2 \\ \hline
+  English & 1.000 &1\\ \hline
+  Spanish & 0.471 &11\\ \hline
+  Arabic & 0.286 &6\\ \hline
+  Malay & 0.286 &12\\ \hline
+  Russia & 0.734 &9 \\ \hline
+  Bengali & 0.083 &3 \\ \hline
+  Portugal & 0.341 &8 \\ \hline
+  French & 0.495 &4 \\ \hline
+  Punjabi & 0.083 &5  \\ \hline
+  Japanese & 0.750 &7 \\ \hline
+  Hindi & 0.644 & 10 \\ \hline
+\end{tabular}
+
+
+
+The blank of value determines the rank of each language. Then we use this rank to make some amendments to the primary language population dynamics model. According to the data of \emph{Languages for the Future} \footnote{The model is studied by the British Council, \url{www.britishcouncil.org}} , we assume that these factors will at most influence 3\% of the language population. The change rate of language population can follow the linear change in the range of 0 to 3\%. Then we get the curves of  language population dynamics model in generalized sense.
+
+\includegraphics[scale=0.3]{table6.png}
+
+
+
+
+\section{Model analysis}
+\subsection{Investigate trends of global languages}
+\subsubsection{The numbers of native speakers and total language speakers over time}
+
+
+We get the curve of 12 main languages' population over time both in narrow sense and in generalized sense. However, this curve describes the property of total language speakers. In order to investigate the numbers of native speakers in the future, we just need to use the curve of narrow sense because the mobility rate of the population of native speakers is only related to the natural mobility of the population. Other factors give more influence to the number of second language speakers.
+
+\includegraphics[scale=0.3]{table22.jpg}
+
+\includegraphics[scale=0.3]{qwe.jpg}
+
+
+
+\subsubsection{The rank change of 10 main language}
+
+
+
+\includegraphics[scale=0.8]{table5.png}
+
+
+We can find the rank of top ten main language change. French become a ten main language and Russian will be replaced.
+
+
+\subsubsection{The geographic distributions of language}
+
+We selected three representative languages, Arabic, English and Spanish to do the geographical distribution of the analysis.
+
+\includegraphics[scale=0.4]{ab2020.png}
+\includegraphics[scale=0.4]{ab2070.png}
+
+
+
+\includegraphics[scale=0.3]{eng2020.png}
+\includegraphics[scale=0.3]{eng2070.png}
+
+
+
+\includegraphics[scale=0.4]{spa2020.png}
+\includegraphics[scale=0.4]{spa2070.png}
+
+\subsection{Location options for new offices}
+
+In the suppose of our problem, we have had two offices both in New York City in the United States and Shanghai in China. Therefore, English and Chinese can be neglected in this analysis. Then we choose Hindi, Spanish, Bengali, Malay, Arabic and Portugal as the working language in the office besides the basic requirements of English acquisition. In order to have more business value, we choose the relatively developed region among the entire area which speaks the language. The location of the office should be New Delhi,India; Ciudad de Mexicowe, Mexico; Dhaka,Bangladesh; Jakarta, Indonesia; Cairo, Egypt; Rio de Janeiro,Brazil.
+
+
+
+What's more, we suggest that the company only open four international offices for long-term development in New Delhi,India; Ciudad de Mexicowe, Mexico; Jakarta, Indonesia; Cairo, Egypt.
+
+
+
+\newpage
+
+\includegraphics[scale=0.6]{final2.png}
+
+
+\includegraphics[scale=0.6]{final3.png}
+
+
+\subsection{Sensitivity analysis}
+
+Sensitivity Analysis: We choose China to do a sensitivity analysis of beta and k, the results are as follows:
+
+\includegraphics[scale=0.5]{table222.png}
+
+
+\includegraphics[scale=0.5]{table223.png}
+
+Both $\beta$ and $k$ have an impact on the model, with beta can even change the upward or downward trend.
+
+\section{Conclusion}
+\subsection{Strength and weakness}
+ \subsubsection{Strength}
+Various factors have been taken into account, of which the population model takes into account the age structure and population migration, the projected population is consistent with reality, other factors are taken into account, and the flexibility of the model is enhanced.
+
+ \subsubsection{Weakness}
+Fertility mode, the sex ratio and the impact of the model on the model is relatively large, the impact of other factors on the model is not quantitative enough.
+
+
+\newpage
+
+\textbf{Memo}
+
+
+\textbf{To: Chief Operating Officer
+From: A MCM Team
+Date: February 13, 2018
+Subject: Investigation of global language trends and location options for new offices.
+}
+
+Mr. Officer,
+
+We have attached the report to this email, but we also wanted to be given the honor of quickly discussing the trend noticed and our results of suitable location for new offices.
+
+We've investigated 12 world's main language: Chinese, English, Spanish, Arabic, Malay, Russia, Bengali, Portugal, French, Punjabi, Japanese and Hindi.
+
+In the process, we reasonably put emphasis on the main influences of language population caused by the fertility, mortality and migration conditions first.
+
+Then, we work out the primary language population dynamics model.
+
+Next, we add other factors as modulation terms to the primary model. For example, culture factors like booming tourism and culture influence of a language, the linguistic factor like language family, etc. We use method for comprehensive evaluation to achieve this goal, TOPSIS specifically. Then, we work out the revised language population dynamics model as our final model.
+
+Finally, we can pin the suitable international offices. We continue to use method for comprehensive evaluation to achieve this goal. The determinant includes the English popularity and economic conditions besides the final language population dynamics model, for the aim of locating the appropriate offices with easier recruitment of multi-lingual employees and higher business value.
+
+We have had two offices both in New York City in the United States and Shanghai in China. Therefore, English and Chinese can be neglected in this analysis. Then we choose Hindi, Spanish, Bengali, Malay, Arabic and Portuguese as the working language in the office besides the basic requirements of English acquisition. In order to have more business value, The location of the office should be New Delhi,India;Ciudad de Mexicowe,Mexico; Dhaka,Bangladesh; Jakarta, Indonesia; Cairo, Egypt; Rio de Janeiro,Brazil.
+
+What's more, we suggest that the company open four international offices for long-term development in New Delhi,India;Ciudad de Mexicowe, Mexico; Jakarta, Indonesia; Cairo, Egypt;
+
+Please let me know if you have any questions.
+
+Best wishes
+
+MCM Team
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem{1}
+Wikipedia, the free encyclopedia. List of languages by total number of speakers, retrieved from \url{https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers} on \today.
+
+\bibitem{2}
+EF Education First. The English proficiency index research, retrieved from \url{https://liuxue.ef.com.cn/epi/regions/asia/china/} on \today.
+
+\bibitem{3}
+Simons, Gary F. and Charles D. Fennig (eds.). 2017. Ethnologue: Languages of the World, Twentieth edition. Dallas, Texas: SIL International. Online version: \url{http://www.ethnologue.com}.
+
+\bibitem{4}
+Wikipedia, the free encyclopedia. TOPSIS, retrieved from \url{https://en.wikipedia.org/wiki/TOPSIS} on \today.
+
+\bibitem{5}
+United Nations Statistics Division, Population by age, sex and urban/rural residence, retrieved from \url{http://data.un.org/Data.aspx}
+
+
+\bibitem{6}
+Jiang Qiyuan.Mathematical Experiment and Mathematical Modeling [J] .Mathematics and Practice, 2001, 31 (5): 613-617.
+
+\bibitem{7}
+Si Shoukui, Sun Xi Jing Mathematical modeling algorithm and application [M]. National Defense Industry Press, 2011.
+
+
+\end{thebibliography}
+\end{document} 
